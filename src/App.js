@@ -21,8 +21,8 @@ class App extends Component {
 
    if (!changeValue[i]){
    changeValue[i] = this.state.playerTurn
-   }
-   
+  
+  
   const whoTurn = this.state.playerTurn === 'O' ? "X" : "O"
 
       this.setState({
@@ -30,6 +30,7 @@ class App extends Component {
         playerTurn: whoTurn,
         winner: null
       })
+    }
   }
 
   render() {
