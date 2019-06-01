@@ -7,19 +7,22 @@
 }
 
 
-.box {
-  height: 200px;
-  width: 190px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  flex-grow: 1;
-  width: 33%;
-}
-
 .boxcontainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
- 
+  margin: 10rem 15rem;
+}
+
+
+.box {
+  height: 150px;
+  width: 70px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  flex-grow: 1;
+  flex: 1  1 28%;
+  width: 33%;
+  
 }
