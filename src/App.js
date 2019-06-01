@@ -6,8 +6,11 @@ class App extends Component {
     super(props)
 
     this.state = {
-
+        gameBoard: [],
+        playerTurn: 'X',
+        winner: null,
     }
+    
   }
   render() {
   return (
