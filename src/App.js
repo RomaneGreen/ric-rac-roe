@@ -7,8 +7,8 @@ class App extends Component {
     super(props)
 
     this.state = {
-        gameBoard: Array(9).fill("Y"),
-        playerTurn: 'X',
+        gameBoard: Array(9).fill("X"),
+        playerTurn: 'O',
         winner: null,
     }
 
@@ -16,10 +16,14 @@ class App extends Component {
   }
   markBoard = () => {
      alert("you clicked me") 
+  const whoTurn = this.state.playerTurn === 'O' ? "X" : "O"
+      this.setState({
+        playerTurn: whoTurn
+      })
   }
 
   render() {
-    let boxes = this.state.gameBoard.map((x,i) => <div onClick={this.markBoard} key={i} className="box">{i}</div>)
+    let boxes = this.state.gameBoard.map((x,i) => <div onClick={this.markBoard} key={i} className="box">{this.state.playerTurn}</div>)
   return (
         <div>
     <div style={{ }}className="App boxcontainer">
