@@ -7,7 +7,7 @@ class App extends Component {
     super(props)
 
     this.state = {
-        gameBoard: Array(9).fill("tic"),
+        gameBoard: Array(9).fill(null),
         playerTurn: 'O',
         winner: null,
     }
@@ -17,14 +17,14 @@ class App extends Component {
   markBoard = (i) => {
    
 
-    console.log(i)
-    console.log(this.state.gameBoard[i])
    const changeValue = this.state.gameBoard.slice(0,this.state.gameBoard.length) 
-   console.log(changeValue)
+
+   if (!changeValue[i]){
    changeValue[i] = this.state.playerTurn
-   console.log(changeValue)
-    
+   }
+   
   const whoTurn = this.state.playerTurn === 'O' ? "X" : "O"
+
       this.setState({
         gameBoard: changeValue,
         playerTurn: whoTurn,
