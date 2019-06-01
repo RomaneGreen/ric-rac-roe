@@ -3,5 +3,23 @@
   margin: 0 auto;
   padding: 0;
   border: 0;
+  
+}
 
+
+.box {
+  height: 200px;
+  width: 190px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  flex-grow: 1;
+  width: 33%;
+}
+
+.boxcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
 }

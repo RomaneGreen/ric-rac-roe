@@ -10,13 +10,23 @@ class App extends Component {
         playerTurn: 'X',
         winner: null,
     }
-    
+
   }
   render() {
   return (
-    <div style={{ textAlign:'center',margin: '20%'}}className="App">
-      <h3>Im a react appp</h3>
-    </div>
+        <div>
+    <div style={{ }}className="App boxcontainer">
+    
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+    </div></div>
   );
 }
 }
