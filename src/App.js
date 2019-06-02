@@ -41,13 +41,18 @@ class App extends Component {
       [0,4,8],[2,4,6]
     ]
 
-      for( let y = 0; y < winningCombos.length; y++)
-    if ( this.state.gameBoard[0,1,2,3,4,5,6,7,8,9] != null && this.state.gameBoard[y][0] === this.state.gameBoard[y][1] && this.state.gameBoard[y][2]){
+      for( let y = 0; y < winningCombos.length; y++) {
+        console.log(y)
+       // console.log(winningCombos[1][2])
+      }
 
+    if (this.state.gameBoard[0] === this.state.gameBoard[1] && this.state.gameBoard[0] === this.state.gameBoard[2] && !this.state.gameBoard.includes(null)){
     alert("Game over "+this.state.playerTurn + " wins")
+    
     this.setState({
         gameBoard: Array(9).fill(null),
     })
+  
     }else {
           
       if (!this.state.gameBoard.includes(null)) {
@@ -60,24 +65,18 @@ class App extends Component {
   }
   
   render() {
-    //let calcWinner = this.calculateWinner()
-    
-    let boxes = this.state.gameBoard.map((z,i) => <div onClick={ () => this.markBoard(i)} key={i} className="box">{this.state.gameBoard[i]}</div>)
+     this.calculateWinner()
+    let boxes = this.state.gameBoard.map((z,i) => <div  onClick={() => this.markBoard(i)} key={i} className="box">{this.state.gameBoard[i]}</div>)
   return (
         <div>
+
           <h2>Tic-Tac-Toe</h2> <h2>Player {this.state.playerTurn}'s turn</h2>
-    <div style={{ }}className="App boxcontainer">
+
+        <div style={{ }}className="App boxcontainer">
+
           {boxes}
            
-      {/* <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div> */}
+      
     </div></div>
   );
 }
